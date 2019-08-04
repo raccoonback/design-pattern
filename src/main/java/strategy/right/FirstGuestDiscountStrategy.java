@@ -1,4 +1,4 @@
-package strategy;
+package strategy.right;
 
 /**
  * Created by koseungbin on 2019-08-03

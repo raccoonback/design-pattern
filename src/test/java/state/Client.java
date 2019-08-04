@@ -29,9 +29,9 @@ class Client {
         VendingMachine vendingMachine = new VendingMachine();
 
         // when then
-        assertEquals(vendingMachine.select(1), "코인이 존재하지 않습니다.");
-        assertEquals(vendingMachine.select(2), "코인이 존재하지 않습니다.");
-        assertEquals(vendingMachine.select(3), "코인이 존재하지 않습니다.");
+        assertEquals("코인이 존재하지 않습니다.", vendingMachine.select(1));
+        assertEquals("코인이 존재하지 않습니다.", vendingMachine.select(2));
+        assertEquals("코인이 존재하지 않습니다.", vendingMachine.select(3));
 
     }
 
@@ -59,7 +59,7 @@ class Client {
         String product = vendingMachine.select(1);
 
         // then
-        assertEquals(product, "오이", "id = 1 인 상품을 반환한다.");
+        assertEquals("오이", product, "id = 1 인 상품을 반환한다.");
 
     }
 
@@ -74,7 +74,7 @@ class Client {
         int balance = vendingMachine.getBalance();
 
         // then
-        assertEquals(balance, 300, "VendingMachine 현재 잔금은 300(800 - 500)이다.");
+        assertEquals(300, balance, "VendingMachine 현재 잔금은 300(800 - 500)이다.");
 
     }
 
@@ -89,7 +89,7 @@ class Client {
         int balance = vendingMachine.getBalance();
 
         // then
-        assertEquals(balance, 0, "VendingMachine 현재 잔금은 300(800 - 800)이다.");
+        assertEquals(0, balance, "VendingMachine 현재 잔금은 300(800 - 800)이다.");
 
     }
 
